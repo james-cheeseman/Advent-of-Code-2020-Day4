@@ -1,7 +1,7 @@
-from code.passportChecker.py import passportChecker
+from passportChecker import PassportChecker
 
-def test_innit(Pfile):
-    passports = passportChecker(pFile)
+def test_innit(filePath):
+    passports = PassportChecker(filePath)
     print(passports)
 
-test_innit("../input/input.txt")
+test_innit("input/input.txt")

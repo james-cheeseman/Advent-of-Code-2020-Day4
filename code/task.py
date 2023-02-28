@@ -10,8 +10,19 @@ def countPassports(passportList):
     
     return validPassports
 
+def countValidatedPassports(passportList):
+    count = 0
+    for passport in passportList:
+        if(PassportChecker.validatePassport(passport)):
+            count += 1
+    
+    return count
+
       
                      
-passports = PassportChecker("input/input.txt")
+passports = PassportChecker("input/test_input.txt")
 passports = passports.toList()
+
+print("Validated Passports: ",countValidatedPassports(passports))
+
 print(countPassports(passports))
